@@ -56,11 +56,11 @@
     </ons-toolbar>
 
     <ons-tabbar id="tabbar" swipeable position="auto">
-      <ons-tab id ="bar" page="tab1.html" label="Home" icon="ion-home, material:md-home"  active>
+      <ons-tab id="bar" page="tab1.html" label="Home" icon="ion-home, material:md-home" active>
       </ons-tab>
-      <ons-tab class ="cart"page="tab2.html" label="Cart" icon="fa-shopping-cart" badge="" active-icon="fa-shopping-cart">
+      <ons-tab class="cart" page="tab2.html" label="Cart" icon="fa-shopping-cart" badge="" active-icon="fa-shopping-cart">
       </ons-tab>
-      <ons-tab id ="bar"page="tab3.html" label="product" icon="fa-shopping-cart" active-icon="fa-shopping-cart">
+      <ons-tab id="bar" page="tab3.html" label="product" icon="fa-shopping-cart" active-icon="fa-shopping-cart">
       </ons-tab>
 
     </ons-tabbar>
@@ -97,17 +97,23 @@
       <%});%></div>
         
         </script>
-     
+
 
     </ons-page>
   </template>
 
   <template id="tab2.html">
     <ons-page id="Tab2">
-      <ons-list-header>SHOPPING CART</ons-list-header>
+      <ons-list-header>
+        <center>
+          <h1> 
+            <b>SHOPPING CART</b>
+        </h1>
+        </center>
+      </ons-list-header>
 
       <div id="pic"></div>
-        <script id="pic_template" type="text/template"> 
+      <script id="pic_template" type="text/template"> 
                     <% cart.forEach(function(cart){
                       var cart=cart.data()
                       %>
