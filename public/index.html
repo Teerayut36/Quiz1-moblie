@@ -258,11 +258,13 @@
       }
       else if (name != null && items == null) { getAllproduct(name) }
       else if (name != null && items == null) { }
+      getAllproduct()
       // get data for cart screen  
     } else if (event.index == 3) {
       var title = localStorage.getItem('title');
       console.log('Cart click');
       // test(title)
+     
     } localStorage.clear();
 
   });
