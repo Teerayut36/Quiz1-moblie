@@ -113,9 +113,9 @@
         </center>
       </ons-list-header>
 
-      <div id="pic"></div>
+      <div id="pro"></div>
       <div id="showprice"></div>
-      <script id="pic_template" type="text/template"> 
+      <script id="pro_template" type="text/template"> 
                     <% cart.forEach(function(cart){
                       var cart=cart.data()
                       %>
@@ -155,7 +155,7 @@
             %>
   <ons-col width="33%" >
     <ons-card onclick ="detail('<%- products.pid %>')">
-          <img class="" src="<%= products.photo %>" width="99%"height="70px"><br>
+          <img class="" src="<%= products.photo %>" width="100%"height="100%"><br>
   <%= products.Category %><br>
   <%= products.title %><br>
   ฿<%= products.price %>
@@ -274,9 +274,9 @@
         var data = doc.data();
         // $('#photo').html(data.cart[0].photo);
         // $('#price').html(data.cart[0].price); 
-        var pic_template = $('#pic_template').html();
-        var html = ejs.render(pic_template, { cart: data.cart });
-        $('#pic').html(html);
+        var pro_template = $('#pro_template').html();
+        var html = ejs.render(pro_template, { cart: data.cart });
+        $('#pro').html(html);
       } else {
 
         console.log("No such document!");
@@ -453,7 +453,7 @@
 
   //gteDate2cart
   function getData2cart() {
-    document.getElementById('pic').innerHTML = ""
+    document.getElementById('pro').innerHTML = ""
     console.log('zeze', dataCart);
 
     var testnum = 0;
@@ -461,12 +461,12 @@
       var apr = db.collection("product").where("pid", "==", dataCart);
       apr.get().then(function (querySnapshot) {
         console.log(querySnapshot.docs)
-        var pic_template = $('#pic_template').html();
-        var html = ejs.render(pic_template, { cart: querySnapshot.docs, num: testnum });
+        var pro_template = $('#pro_template').html();
+        var html = ejs.render(pro_template, { cart: querySnapshot.docs, num: testnum });
         console.log(html);
 
 
-        $('#pic').append(html);
+        $('#pro').append(html);
         testnum = testnum + 1;
       })
     })
