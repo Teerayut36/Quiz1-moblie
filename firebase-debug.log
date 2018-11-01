@@ -1,0 +1,25 @@
+[debug] [2018-11-01T12:54:25.688Z] ----------------------------------------------------------------------
+[debug] [2018-11-01T12:54:25.690Z] Command:       E:\โปรแกรม\node.exe C:\Users\Teerayut\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2018-11-01T12:54:25.691Z] CLI Version:   6.0.0
+[debug] [2018-11-01T12:54:25.691Z] Platform:      win32
+[debug] [2018-11-01T12:54:25.691Z] Node Version:  v11.0.0
+[debug] [2018-11-01T12:54:25.693Z] Time:          Thu Nov 01 2018 19:54:25 GMT+0700 (Indochina Time)
+[debug] [2018-11-01T12:54:25.693Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-11-01T12:54:25.712Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-01T12:54:25.712Z] > authorizing via signed-in user
+[debug] [2018-11-01T12:54:25.712Z] [iam] checking project shopee-1 for permissions ["firebase.projects.get"]
+[debug] [2018-11-01T12:54:25.715Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopee-1:testIamPermissions  
+
+[debug] [2018-11-01T12:54:27.359Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T12:54:27.361Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shopee-1  
+ 
+[debug] [2018-11-01T12:54:28.715Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'E:\งานทั้งหมด\Mobile\Quiz1-moblie'...
+[info] 
+[debug] [2018-11-01T12:54:28.718Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/641889602156/clients/_:getWebAppConfig  
+ 
+[debug] [2018-11-01T12:54:29.411Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
