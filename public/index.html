@@ -114,7 +114,7 @@
       </ons-list-header>
 
       <div id="pic"></div>
-      <div id="showpriceproduct"></div>
+      <div id="showprice"></div>
       <script id="pic_template" type="text/template"> 
                     <% cart.forEach(function(cart){
                       var cart=cart.data()
@@ -125,7 +125,7 @@
                 </div>
                 <div class="center">
                     <span class="list-item__title"><%= cart.itemname %></span>
-                    <span class="list-item__subtitle" style="color: blue;"><%= cart.price %></span>
+                    <span class="list-item__subtitle" style="color: blue;">฿<%= cart.price %></span>
                 </div>
                 <div class="right">
                   <ons-icon icon="md-delete" onclick="deleteb(<%=num%>); deleteprice('<%= cart.price %>')"></ons-icon>
@@ -195,15 +195,9 @@
   
               <div class="content">
                 <div>
-                  <%= data.price %>
+                 <h1>฿<%= data.price %></h1>
                 </div>
   
-                <ons-list>
-                  
-                  <ons-list-item>Vue</ons-list-item>
-                  <ons-list-item>Angular</ons-list-item>
-                  <ons-list-item>React</ons-list-item>
-                </ons-list>
               </div>
               <ons-button onclick="addtocart('<%= data.pid %>'); totalprice('<%= data.price %>')" >ADD TO CART</ons-button>
               <%})%>
@@ -483,10 +477,11 @@
     console.log(i);
 
     console.log(dataCart);
-
     var remove = dataCart.splice(i, 1)
 
-    ons.notification.alert("Do you want to delete the item?");
+     
+
+    ons.notification.alert('Remove');
     getData2cart()
 
   }
@@ -497,14 +492,14 @@
     console.log(price1);
 
     priceitem = priceitem + price1;
-    $('#showpriceproduct').html("<p><b>&nbsp; Total Price is : </b>" + priceitem + " </p>");
+    $('#showprice').html("<p><b>&nbsp; Total Price is :฿ </b>" + priceitem + " </p>");
   }
   function deleteprice(price2) {
     var price2 = parseInt(price2, 10)
     console.log(price2);
 
     priceitem = priceitem - price2;
-    $('#showpriceproduct').html("<p><b>&nbsp; Total Price is : </b>" + priceitem + " </p>");
+    $('#showprice').html("<p><b>&nbsp; Total Price is : </b>" + priceitem + " </p>");
 
   }
 
