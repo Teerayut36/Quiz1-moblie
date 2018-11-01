@@ -1,25 +1,65 @@
-[debug] [2018-11-01T13:39:25.168Z] ----------------------------------------------------------------------
-[debug] [2018-11-01T13:39:25.172Z] Command:       E:\โปรแกรม\node.exe C:\Users\Teerayut\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
-[debug] [2018-11-01T13:39:25.172Z] CLI Version:   6.0.0
-[debug] [2018-11-01T13:39:25.172Z] Platform:      win32
-[debug] [2018-11-01T13:39:25.172Z] Node Version:  v11.0.0
-[debug] [2018-11-01T13:39:25.175Z] Time:          Thu Nov 01 2018 20:39:25 GMT+0700 (Indochina Time)
-[debug] [2018-11-01T13:39:25.175Z] ----------------------------------------------------------------------
+[debug] [2018-11-01T14:43:15.451Z] ----------------------------------------------------------------------
+[debug] [2018-11-01T14:43:15.454Z] Command:       E:\โปรแกรม\node.exe C:\Users\Teerayut\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2018-11-01T14:43:15.454Z] CLI Version:   6.0.0
+[debug] [2018-11-01T14:43:15.454Z] Platform:      win32
+[debug] [2018-11-01T14:43:15.454Z] Node Version:  v11.0.0
+[debug] [2018-11-01T14:43:15.455Z] Time:          Thu Nov 01 2018 21:43:15 GMT+0700 (Indochina Time)
+[debug] [2018-11-01T14:43:15.455Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-11-01T13:39:25.239Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-11-01T13:39:25.240Z] > authorizing via signed-in user
-[debug] [2018-11-01T13:39:25.240Z] [iam] checking project shopee-1 for permissions ["firebase.projects.get"]
-[debug] [2018-11-01T13:39:25.243Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopee-1:testIamPermissions  
+[debug] [2018-11-01T14:43:15.468Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-11-01T14:43:15.468Z] > authorizing via signed-in user
+[debug] [2018-11-01T14:43:15.468Z] [iam] checking project shopee-1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2018-11-01T14:43:15.470Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-11-01T14:43:15.470Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-11-01T14:43:15.751Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T14:43:15.801Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopee-1:testIamPermissions  
 
-[debug] [2018-11-01T13:39:26.671Z] <<< HTTP RESPONSE 200
-[debug] [2018-11-01T13:39:26.673Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/shopee-1  
+[debug] [2018-11-01T14:43:17.173Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T14:43:17.174Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/shopee-1  
  
-[debug] [2018-11-01T13:39:28.012Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T14:43:17.640Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from 'E:\งานทั้งหมด\Mobile\Quiz1-moblie'...
+[info] === Deploying to 'shopee-1'...
 [info] 
-[debug] [2018-11-01T13:39:28.020Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/641889602156/clients/_:getWebAppConfig  
- 
-[debug] [2018-11-01T13:39:28.559Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] +  hosting: Local server: http://localhost:5000
+[info] i  deploying hosting
+[debug] [2018-11-01T14:43:17.645Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopee-1/versions  
+
+[debug] [2018-11-01T14:43:19.460Z] <<< HTTP RESPONSE 200
+[info] i  hosting[shopee-1]: beginning deploy...
+[info] i  hosting[shopee-1]: found 11 files in public
+[debug] [2018-11-01T14:43:19.477Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2018-11-01T14:43:19.595Z] [hosting] hash cache [cHVibGlj] stored for 11 files
+[debug] [2018-11-01T14:43:19.595Z] [hosting][hash queue][FINAL]
+[debug] [2018-11-01T14:43:19.596Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopee-1/versions/ca6016fbc2bafa64:populateFiles  
+ <request body omitted>
+[debug] [2018-11-01T14:43:21.643Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T14:43:21.646Z] [hosting][populate queue][FINAL]
+[debug] [2018-11-01T14:43:21.647Z] [hosting] uploads queued: 1
+[debug] [2018-11-01T14:43:25.129Z] [hosting][upload queue][FINAL]
+[info] +  hosting[shopee-1]: file upload complete
+[debug] [2018-11-01T14:43:25.130Z] [hosting] deploy completed after 5668ms
+[debug] [2018-11-01T14:43:25.341Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "shopee-1"
+    },
+    "site": "shopee-1",
+    "version": "sites/shopee-1/versions/ca6016fbc2bafa64"
+  }
+]
+[info] i  hosting[shopee-1]: finalizing version...
+[debug] [2018-11-01T14:43:25.342Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/shopee-1/versions/ca6016fbc2bafa64?updateMask=status  
+
+[debug] [2018-11-01T14:43:26.938Z] <<< HTTP RESPONSE 200
+[debug] [2018-11-01T14:43:26.938Z] [hosting] finalized version for shopee-1:
+[info] +  hosting[shopee-1]: version finalized
+[info] i  hosting[shopee-1]: releasing new version...
+[debug] [2018-11-01T14:43:26.939Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopee-1/releases?version_name=sites/shopee-1/versions/ca6016fbc2bafa64  
+
